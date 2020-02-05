@@ -1,0 +1,595 @@
+@import '../node_modules/reset-css/reset.css';
+@import "../node_modules/react-datepicker/dist/react-datepicker.css";
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+  font-weight: 400;
+}
+.App {
+  text-align: left;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+}
+
+.App-header h2 {
+  font-size: 30px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+  color: inherit;
+  margin-left: 12px;
+  position: absolute;
+}
+
+.App-header-2 h2 {
+  font-size: 30px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+  color: inherit;
+  margin-left: 12px;
+}
+
+.App-intro {
+  font-size: 28pt;
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: 200;
+  margin-top: 0;
+  line-height: 1.4;
+}
+
+@media (max-width: 960px) {
+  .App-intro {
+    font-size: 18px;
+  }
+  .App-intro-sm {
+    font-size: 18px !important;
+  }
+}
+
+@media (min-width: 600px) {
+  .stationAdornement {
+    display: none !important;
+  }
+}
+
+.wtf h2 {
+  font-size: 30px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.App-intro-sm {
+  font-size: x-large;
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 300;
+  margin-top: 0;
+  line-height: 1.4;
+  color: rgba(0, 0, 0, 0.36);
+}
+
+.App {
+  width: auto;
+  // background-color: teal;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.form-control-my {
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: 1px solid #f5f5f5;
+  width: 100%;
+  box-shadow: none;
+  padding: 22px 22px 22px 0px;
+  font-size: 24px;
+  border-radius: 0;
+  font-weight: 200;
+}
+
+.form-control-my:focus {
+  outline: none;
+  border-bottom: 1px solid #c3c3c3;
+}
+
+.form-control-my.with-error {
+  border-bottom: 1px solid red;
+}
+
+.autocomplete-item {
+  padding: 10px;
+}
+
+.autocomplete-item.active {
+  background-color: #f9f9f9;
+}
+
+.wtf {
+  transform: rotate(90deg);
+  position: absolute;
+  left: -16px;
+  top: 52px;
+}
+
+.Calendar {
+  // margin-top: 35px;
+}
+
+.Calendar .table-condensed > tbody > tr > td {
+  // padding: 12px !important;
+}
+
+.CalendarDay {
+  vertical-align: middle;
+}
+
+.DayPicker {
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 480px) {
+  .DayPickerNavigation_button {
+    width: 46% !important;
+  }
+}
+
+.Searcher .btn-main {
+  border: none;
+  font-size: 17pt;
+  border-bottom: 1px solid #b3b3b3;
+  border-radius: 0;
+  padding-left: 0;
+  padding-bottom: 5px;
+  padding-right: 4px;
+  width: 100%;
+  margin-top: 18px;
+  outline: none !important;
+}
+
+.Searcher .btn-main:hover {
+  background-color: transparent;
+  border-color: #999;
+}
+
+.Searcher .btn-main:active {
+  outline: none;
+  box-shadow: none;
+  background-color: transparent !important;
+  border-color: #333;
+}
+
+.Searcher .btn-main:focus {
+  background-color: transparent !important;
+  border-color: #333;
+}
+
+.Searcher .react-spinner_bar {
+    background-color: black;
+    position: absolute;
+    width: 28%;
+    height: 3.8%;
+    top: -3.9%;
+    left: -10%;
+}
+
+.Searcher .error {
+  color: red;
+}
+
+/* a:hover {
+ cursor:pointer;
+} */
+
+.btn.btn-primary {
+  background-color: #00a699;
+  border-color: #009085;
+}
+
+
+.link-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+  display: inline;
+  margin: 0;
+  padding: 0;
+  color: #337ab7;
+}
+
+.link-button:hover,
+.link-button:focus {
+text-decoration: none;
+color: #23527c;
+}
+
+.searcher-heading {
+  font-weight: 200;
+  margin-left: 23px;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+
+.searcher-heading-2 {
+  font-weight: 200;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+
+.searcher-heading-3 {
+  font-weight: 400;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.img-responsive {
+  max-width: 100%;
+  display: block;
+  margin: auto;
+}
+
+.has-error .DayPicker {
+  border: 1px solid #f44336;
+}
+
+.DayPicker {
+  box-shadow: none !important;
+}
+
+.DayPicker table {
+  margin-top: 8px;
+}
+
+strong {
+  font-weight: bold;
+}
+
+small {
+  font-size: 85%;
+}
+
+button {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+
+@media only screen and (max-width: 600px) {
+    /* horizontal scrollbar for tables if mobile screen */
+    .tableDiv {
+        overflow-x: auto;
+    }
+
+
+}
+
+
+
+
+.table td {
+  vertical-align: middle;
+}
+
+
+.table {
+  th {
+    text-align: center;
+  }
+
+  tbody {
+    font-size: 11pt;
+  }
+
+  .buyButtonTh {
+    width: 106px;
+  }
+
+  @media (max-width: 960px) {
+    .loadingTr {
+      .loadingTagContainer {
+        position: sticky;
+        left: 8px;
+        width: 90vw;
+        display: block;
+      }
+    }
+
+    .errorTr {
+      .has-error {
+        position: sticky;
+        left: 8px;
+        width: 90vw;
+        display: block;
+      }
+    }
+  }
+
+  tbody tr {
+    border-bottom: 1px solid #ddd;
+
+    &.itemTr {
+      height: 57px;
+    }
+
+
+
+    // &.errorTr {
+    //   height: 30px;
+    //   vertical-align: middle;
+    //   color: #fff;
+    //
+    //   td {
+    //     position: absolute;
+    //     padding: 0;
+    //
+    //     .has-error {
+    //     background-color: #f44336;
+    //     }
+    //   }
+    // }
+  }
+
+  thead th {
+    width: 87px;
+  }
+  tbody td {
+    position: relative;
+  }
+
+  thead tr {
+    border-bottom: 2px solid #ddd;
+  }
+
+  td {
+    padding: 2px 8px;
+  }
+
+  .journeyMetadata {
+    position: absolute;
+    top: 5px;
+    left: 13px;
+    font-size: 70%;
+    color: #ccc;
+  }
+
+  .lowestPrice {
+    color: Goldenrod;
+    cursor: default;
+  }
+
+  .BuyButtonContainer {
+    vertical-align: middle;
+    text-align: right;
+  }
+
+  width: 100%;
+
+  &.tableTransferRoutes {
+    th:nth-child(2) {
+      width: 128px !important;
+      min-width: 128px !important;
+    }
+  }
+}
+
+h4 {
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+p {
+  margin: 0 0 10px;
+}
+
+.popoverHelp {
+  li {
+    margin-bottom: 10px;
+  }
+}
+
+.loadingTag {
+  margin: 9px 0px;
+  display: block;
+  -webkit-text-size-adjust: none;
+}
+
+.errorTr {
+  height: 30px;
+  background-color: #f44336;
+  vertical-align: middle;
+  color: #fff;
+  p {
+    margin-bottom: 6px;
+  }
+}
+
+
+#DayPickerContainer {
+  text-align: center;
+  .react-datepicker__header {
+    background-color: white;
+    border-bottom: none;
+  }
+
+  .react-datepicker__day {
+    width: 2.3rem;
+    line-height: 2.3rem;
+    border: 1px solid #dcdcdc;
+    margin: 0;
+    box-sizing: border-box;
+    margin-right: -1px;
+    margin-bottom: -1px;
+    font-size: 115%;
+  }
+
+  .react-datepicker__day--outside-month {
+    color: #ccc;
+    &.react-datepicker__day--in-range, &.react-datepicker__day--selected {
+      background-color: #ececec;
+    }
+  }
+
+  .react-datepicker__day--in-range, .react-datepicker__day--selected {
+    border-radius: 0;
+    background-color: #3f51b5;
+  }
+
+  .react-datepicker__day--in-selecting-range {
+    background-color: #7986cb;
+  }
+
+  .react-datepicker {
+    border: 0;
+    font-family: inherit;
+    margin-top: 20px;
+  }
+
+  .react-datepicker__day-name {
+    line-height: 1.0rem;
+  }
+
+  .react-datepicker__day-names {
+    margin-bottom: -6px;
+    margin-top: 10px;
+  }
+
+
+  @media (max-width: 600px) {
+    .react-datepicker__month-container {
+      float: none;
+    }
+  }
+}
+
+.sliderHiddenMobile {
+  @media (max-width: 600px) {
+    display: none;
+  }
+}
+
+.PriceTagContainer {
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.DetailsPopover {
+  padding: 5px;
+  font-size: 85%;
+}
+
+.FlipButton {
+  margin: 2px 0 !important;
+}
+
+.adTrContainer {
+  width: 90vw;
+  position: sticky;
+  left: 8px;
+  text-align: center;
+  max-width: 100%;
+
+  div {
+    display: inline-block;
+  }
+}
+
+
+@media (min-width: 1160px) {
+  .rightAdBlock {
+    display: inline-block;
+    position: sticky;
+    top: 25px;
+    height: 600px;
+    width: 300px;
+    overflow: hidden;
+  }
+
+  .tableDiv {
+    display: inline-block;
+    // width: calc(100% - 315px);
+    width: 100%;
+    // position: relative;
+    overflow-x: scroll;
+  }
+
+  .rightAdBlockContainer {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin-left: 15px;
+    // left: calc(100% + 15px);
+    left: 100%;
+  }
+
+  .tableAndAdContainer {
+    position: relative;
+    max-width: calc(100% - 122px);
+    margin-bottom: 32px;
+  }
+
+  .adTr, .topAdBlockContainer {
+    display: none;
+  }
+}
+
+.tableAndAdContainer-activeSlider {
+  .topAdBlockContainer, .adTr {
+    display: none;
+  }
+}
+
+
+@media (max-width: 1160px) {
+  .table {
+    table-layout: fixed;
+  }
+
+  .rightAdBlockContainer {
+    margin-top: 15px;
+  }
+}
+
+.responsiveEmbed {
+  @media (min-width: 600px) {
+    width: 560px;
+    height: 315px;
+  }
+
+  @media (max-width: 600px) {
+    width: 300px;
+    height: 168px;
+  }
+}
+
+.videoInstructions {
+  margin-bottom: 16px;
+}
+
+.blockquote-warning {
+  margin: 24px 0;
+  padding: 15px 24px;
+  border-left: 5px solid #ffe564;
+  background-color: rgba(255,229,100,0.2);
+}

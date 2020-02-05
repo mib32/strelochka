@@ -1,0 +1,2 @@
+app_domain: 'http://localhost:5000'
+dyno_restart_app_name: 'strelochka'

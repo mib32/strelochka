@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  from_code: MyString
+  from_string: MyString
+  to_code: MyString
+  to_string: MyString
+  date: 2017-05-08
+  result: 
+  request_id: MyString
+
+two:
+  from_code: MyString
+  from_string: MyString
+  to_code: MyString
+  to_string: MyString
+  date: 2017-05-08
+  result: 
+  request_id: MyString

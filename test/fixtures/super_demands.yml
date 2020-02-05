@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  email: MyString
+  discarded_at: 2019-07-09 17:21:08
+  discard_token: MyString
+  result: 
+  from_code: MyString
+  to_code: MyString
+  from_string: MyString
+  to_string: MyString
+  md: false
+
+two:
+  email: MyString
+  discarded_at: 2019-07-09 17:21:08
+  discard_token: MyString
+  result: 
+  from_code: MyString
+  to_code: MyString
+  from_string: MyString
+  to_string: MyString
+  md: false

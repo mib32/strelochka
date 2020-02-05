@@ -1,0 +1,6 @@
+telegram:
+  demand_bot_token: <%= ENV.fetch('TELEGRAM_DEMAND_BOT_TOKEN', nil) %>
+  bot_token: <%= ENV.fetch('TELEGRAM_BOT_TOKEN', nil) %>
+  chat_id: <%= ENV.fetch('CHAT_ID', nil) %>
+superdemand_days_count: 119
+fetch_thread_count: <%= ENV.fetch('FETCH_THREADS_COUNT', 30) %>

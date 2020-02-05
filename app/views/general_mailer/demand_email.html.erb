@@ -1,0 +1,21 @@
+<h1>Понижение цен на участке <%= @demand.from_string %> - <%= @demand.to_string %></h1>
+
+<% @timetables.each do |date, old_timetable, new_timetable, lowered| %>
+  <% if lowered.any? %>
+    <% parsed_date = Date.parse(date) %>
+    <p><b><%= l parsed_date, format: :long %></b></p>
+
+    <p><b>Было</b></p>
+    <p><%= old_timetable.map {|k, v| [k, v].join(': ')}.join(', ') %></p>
+
+    <p><b>Стало</b></p>
+    <p><%= new_timetable.map {|k, v| [k, v.price].join(': ')}.join(', ') %></p>
+
+    <p><b>Разница</b></p>
+    <p><%= lowered.map {|c| c.join(': ')}.join(', ') %></p>
+  <% end %>
+<% end %>
+
+<p><a href="<%= "#{Settings.app_domain}/search?from_code=#{@demand.from_code}&from_string=#{@demand.from_string}&from_date=#{@timetables.first[0]}&to_date=#{@timetables.last[0]}&to_code=#{@demand.to_code}&to_string=#{@demand.to_string}&md=#{@demand.md ? 1 : 0}" %>">Перейти к таблице</a></p>
+
+<p><%= link_to 'Отказаться от этой рассылки', discard_demand_url(@demand, token: @demand.discard_token), method: :delete %></p>

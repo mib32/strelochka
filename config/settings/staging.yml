@@ -1,0 +1,2 @@
+app_domain: 'https://staging.strelchka.ru'
+dyno_restart_app_name: 'strelochka-staging'

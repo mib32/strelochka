@@ -1,0 +1,12 @@
+{
+  "name": "Strelochka",
+  "engines": {
+    "node": "8.16.0",
+    "npm": "6.4.1"
+  },
+  "cacheDirectories": ["client/node_modules"],
+  "scripts": {
+    "build": "cd client && npm install --no-audit && npm run build && cd .. && npm run deploy && echo 'Client built!'",
+    "deploy": "cp -a client/build/. public/ && rm public/index.html"
+  }
+}

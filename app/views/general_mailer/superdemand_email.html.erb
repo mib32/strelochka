@@ -1,0 +1,13 @@
+<h1>Сумасшедшие цены на участке <%= @route.from_string %> - <%= @route.to_string %></h1>
+
+<p>Средняя цена: <%= @route.averages.map {|car_type, price| "#{car_type}: #{price} р."}.join(', ') %>
+
+<% @low_prices.each do |date, low_price_cars| %>
+  <% parsed_date = Date.parse(date) %>
+  <p><b><%= l parsed_date, format: :long %></b></p>
+
+  <p><%= low_price_cars.map {|car_type, price| "#{car_type}: #{price} р. (ср: #{@route.averages[car_type]} р.)"}.join(', ') %></p>
+<% end %>
+
+<p><a href="<%= "#{Settings.app_domain}/search?from_code=#{@route.from_code}&from_string=#{@route.from_string}&from_date=#{Date.today.iso8601}&to_date=#{(Date.today + Settings.superdemand_days_count).iso8601}&to_code=#{@route.to_code}&to_string=#{@route.to_string}&md=#{@route.md ? 1 : 0}" %>">Перейти к таблице</a></p>
+<p><%= link_to 'Отказаться от этой рассылки', discard_super_demand_url(@demand, token: @demand.discard_token), method: :delete %></p>

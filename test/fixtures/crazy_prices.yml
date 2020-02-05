@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  price: 1
+  date: 2019-07-11 17:41:18
+  from_code: MyString
+  to_code: MyString
+  email: MyString
+
+two:
+  price: 1
+  date: 2019-07-11 17:41:18
+  from_code: MyString
+  to_code: MyString
+  email: MyString
